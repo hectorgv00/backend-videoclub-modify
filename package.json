@@ -1,0 +1,39 @@
+{
+  "name": "fsd-btc-reto4-movie-api",
+  "version": "0.0.1",
+  "description": "reto 04 FSD BTC GeeksHubs. DB & API ",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectorgv00/FSD-BTC-Reto4-Movie-API.git"
+  },
+  "keywords": [
+    "npm",
+    "sequelize",
+    "node",
+    "js"
+  ],
+  "author": "Hector Gonzalez Viejo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hectorgv00/FSD-BTC-Reto4-Movie-API/issues"
+  },
+  "homepage": "https://github.com/hectorgv00/FSD-BTC-Reto4-Movie-API#readme",
+  "dependencies": {
+    "colors": "1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "2.18.1",
+    "mysql2": "2.3.3",
+    "nodemon": "2.0.20",
+    "sequelize": "6.25.3",
+    "sequelize-cli": "6.5.2"
+  }
+}
