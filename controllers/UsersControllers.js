@@ -165,4 +165,39 @@ try {
 }
 }
 
+usersControllers.deleteCurrentUser = async (req,res)=>{
+  const { authorization } = req.headers;
+  const [strategy, jwt] = authorization.split(" ");
+  const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET);
+  let userBody = req.body;
+  let password = userBody.password;
+  let email = userBody.email;
+  if (email !== payload.email) {
+    res.status(401).json({ message: "The email is incorrect" });
+    return
+  }
+  try {
+    const userFound = await models.user.findOne({where: {email: email,}
+    });
+    const hashedPassword = encryptPassword(password);
+    if (hashedPassword !== userFound.password) {
+      res.status(401).json({ message: "The password is incorrect" });
+      return;
+    }
+    let resp = await models.user.destroy({
+      where: {
+        email: payload.email,
+      }
+    })
+    if(resp === 1){
+      res.send("User deleted successfully")
+    }else{
+      res.send("The account could not be deleted");
+    }
+  } catch (error) {
+    res.send(error)
+
+  }
+}
+
 module.exports = usersControllers;
