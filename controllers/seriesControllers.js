@@ -42,9 +42,11 @@ SeriesControllers.getSeriestitle = async (req,res) =>{
     try {
       let { title } = req.params;
           let resp = await models.series.findAll({
-              where:{
-                  title: title
-                  }
+            where:{
+              title: {
+                [Op.like]: `%${title}%`
+              }
+              }
               }
           );
           res.send(resp);

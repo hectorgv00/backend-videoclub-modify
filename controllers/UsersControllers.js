@@ -63,7 +63,7 @@ usersControllers.login = async (req, res) => {
     const userFound = await models.user.findOne({where: {email: email,}
     });
     if (!userFound) {
-      res.status(401).json({ message: "Password or email is incorrect" });
+      res.send("Password or email is incorrect");
       return;
     }
     const hashedPassword = encryptPassword(password);

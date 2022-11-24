@@ -40,7 +40,9 @@ MoviesControllers.getMoviestitle = async (req,res) =>{
     let { title } = req.params;
         let resp = await models.movies.findAll({
             where:{
-                title: title
+                title: {
+                  [Op.like]: `%${title}%`
+                }
                 }
             }
         );
