@@ -6,7 +6,17 @@ module.exports = {
 
     await queryInterface.bulkInsert('actorMovies', [
       
-      {id_actorMovies:1,actorIdActor:1, movieIdMovie:1, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:1,actorIdActor:18, movieIdMovie:1, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:2,actorIdActor:1, movieIdMovie:2, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:3,actorIdActor:19, movieIdMovie:3, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:4,actorIdActor:20, movieIdMovie:4, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:5,actorIdActor:21, movieIdMovie:5, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:6,actorIdActor:22, movieIdMovie:6, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:7,actorIdActor:23, movieIdMovie:7, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:8,actorIdActor:24, movieIdMovie:9, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:9,actorIdActor:25, movieIdMovie:10, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:10,actorIdActor:26, movieIdMovie:11, createdAt:"2022-01-11",updatedAt:"2022-01-11",},
+      {id_actorMovies:11,actorIdActor:27, movieIdMovie:12, createdAt:"2022-01-11",updatedAt:"2022-01-11",}
 
 ], {});
 
