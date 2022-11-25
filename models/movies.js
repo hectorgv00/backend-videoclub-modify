@@ -32,14 +32,6 @@ module.exports = (sequelize, DataTypes) => {
     genre: DataTypes.STRING,
     summary: DataTypes.TEXT,
     date: DataTypes.DATE,
-    actor: {
-      type:DataTypes.STRING,
-      allowNull: false,
-      validate:{
-        len:[1,20]
-      }
-    },
-    
     poster: {
       type:DataTypes.STRING,
       allowNull: true,

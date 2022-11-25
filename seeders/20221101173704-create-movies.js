@@ -7,7 +7,6 @@ module.exports = {
       await queryInterface.bulkInsert('movies', [
         {
         articleIdArticles: 1,
-        actor: "Dwaine Jhonson",
         id_movies: 1,
         title: "Terrifier 2",
         genre:"Horror",
@@ -22,7 +21,6 @@ module.exports = {
       },
       {
         articleIdArticles: 2,
-        actor: "Dwaine Jhonson",
         id_movies: 2,
         title: "Black Adam",
         genre:"Action",
@@ -36,7 +34,6 @@ module.exports = {
       },
       {
         articleIdArticles: 3,
-        actor: "Dwaine Jhonson",
         id_movies: 3,
         title: "Jeepers Creepers: Reborn",
         genre:"Horror",        
@@ -51,7 +48,6 @@ module.exports = {
 
       {
         articleIdArticles: 7,
-        actor: "Dwaine Jhonson",
         id_movies: 4,
         title: "Orphan: First Kill",
         genre:"Horror",
@@ -65,7 +61,6 @@ module.exports = {
       },
       {
         articleIdArticles: 8,
-        actor: "Dwaine Jhonson",
         id_movies: 5,
         title: "Hocus Pocus 2",
         genre:"Adventure",
@@ -79,7 +74,6 @@ module.exports = {
       },
       {
         articleIdArticles: 11,
-        actor: "Dwaine Jhonson",
         id_movies: 6,
         title: "Mission: Impossible - Rogue Nation",
         genre:"Action",
@@ -93,7 +87,6 @@ module.exports = {
       },
       {
         articleIdArticles: 12,
-        actor: "Dwaine Jhonson",
         id_movies: 7,
         title: "Project Almanac",
         genre:"Science fiction",
@@ -107,7 +100,6 @@ module.exports = {
       },
       {
         articleIdArticles: 13,
-        actor: "Dwaine Jhonson",
         id_movies: 8,
         title: "Containment",
         genre:"Science fiction",
@@ -121,7 +113,6 @@ module.exports = {
       },
       {
         articleIdArticles: 17,
-        actor: "Dwaine Jhonson",
         id_movies: 9,
         title: "The Suicide Squad",
         genre:"Action",
@@ -135,7 +126,6 @@ module.exports = {
       },
       {
         articleIdArticles: 18,
-        actor: "Dwaine Jhonson",
         id_movies: 10,
         title: "The Woman King",
         genre:"Historical fiction",
@@ -149,7 +139,6 @@ module.exports = {
       },
       {
         articleIdArticles: 19,
-        actor: "Dwaine Jhonson",
         id_movies: 11,
         title: "Luca",
         genre:"Animation",
@@ -163,7 +152,6 @@ module.exports = {
       },
       {
         articleIdArticles: 20,
-        actor: "Dwaine Jhonson",
         id_movies: 12,
         title: "Smile",
         genre:"Horror",
