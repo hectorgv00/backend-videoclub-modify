@@ -1,6 +1,9 @@
 const { Op } = require("sequelize");
+const { sequelize } = require("../models/index");
 const models = require("../models/index");
 const MoviesControllers = {};
+const { QueryTypes } = require('sequelize');
+
 
 // Encuentra película por id
 
@@ -62,6 +65,23 @@ MoviesControllers.getMoviesGenre = async (req,res) =>{
                 }
             }
         );
+        res.send(resp);
+      } catch (error) {
+        res.send(error);        
+}}
+
+MoviesControllers.getMoviesActor = async (req,res) =>{
+  try {
+    let { actor } = req.params;
+        let resp = await sequelize.query(
+          `SELECT actors.name, movies.title
+          FROM actors 
+          JOIN actorMovies ON actorMovies.actorIdActor = actors.id_actor
+          JOIN movies ON actorMovies.movieIdMovie = movies.id_movies
+          Where actors.name = "${actor}" `
+          
+          // actors.name = "%+${actor}+%"  
+        )
         res.send(resp);
       } catch (error) {
         res.send(error);        

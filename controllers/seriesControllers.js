@@ -1,4 +1,5 @@
 const { Op } = require("sequelize");
+const { sequelize } = require("../models/index");
 const models = require("../models/index");
 const SeriesControllers = {};
 
@@ -83,5 +84,23 @@ SeriesControllers.getSeriesCinema = async (req,res) =>{
         } catch (error) {
           res.send(error);        
   }}
+
+  SeriesControllers.getSeriesActor = async (req,res) =>{
+    try {
+      let { actor } = req.params;
+          let resp = await sequelize.query(
+            `  SELECT actors.name, series.title
+            FROM actors 
+            JOIN actorSeries ON actorSeries.actorIdActor = actors.id_actor
+            JOIN series ON actorSeries.seriesIdSeries = series.id_series
+            Where actors.name = "${actor}"  `
+            
+            // actors.name = "%+${actor}+%"  
+          )
+          res.send(resp);
+        } catch (error) {
+          res.send(error);        
+  }}
+
 
 module.exports = SeriesControllers;
