@@ -128,6 +128,8 @@ usersControllers.modifyCurrentUser = async (req,res) => {
   const { authorization } = req.headers;
   const [strategy, jwt] = authorization.split(" ");
   const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET);
+
+  
   if (req.body.email !== payload.email) {
     throw new Error ("You can only modify your account")
     return
@@ -138,8 +140,28 @@ usersControllers.modifyCurrentUser = async (req,res) => {
       name: data.name,
       surname: data.surname,
       address: data.address
-    },{where: {email:data.email}})
-    res.send("Se ha actualizado el registro correctamente")
+    },{where: {email:data.email}});
+
+    const secret = process.env.JWT_SECRET || '';
+  
+    if (secret.length < 10) {
+      throw new Error("JWT_SECRET is not set");
+    }
+    
+    const jwt = jsonwebtoken.sign({
+      id_user: payload.id_user,
+      name: data.name,
+      email: payload.email,
+      rolIdRol: payload.rolIdRol
+    }, secret);
+    
+  
+    res.status(200).json({
+      message: "Data modified successfully",
+      jwt: jwt,
+    });
+
+
   } catch (error) {
     res.send(error)
   }
