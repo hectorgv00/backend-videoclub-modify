@@ -69,7 +69,7 @@ loansEndpoints.myLoansSeries = async(req,res) => {
     try {
       let  id  = payload.id_user;
       let resp = await sequelize.query(
-        `SELECT loans.date_of_loan, series.title, series.summary, series.poster
+        `SELECT loans.date_of_loan, loans.id_loan, series.title, series.summary, series.poster
         FROM articles
         Join loans ON loans.ArticleIdArticles = articles.id_articles
         Join series on series.articleIdArticles = articles.id_articles
@@ -88,7 +88,7 @@ loansEndpoints.myLoansMovies = async(req,res) => {
     try {
       let  id  = payload.id_user;
       let resp = await sequelize.query(
-        `SELECT loans.date_of_loan, movies.title, movies.summary, movies.poster
+        `SELECT loans.date_of_loan, loans.id_loan, movies.title, movies.summary, movies.poster
         FROM articles
         Join loans ON loans.ArticleIdArticles = articles.id_articles
         Join movies on movies.articleIdArticles = articles.id_articles
