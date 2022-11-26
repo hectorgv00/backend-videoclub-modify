@@ -2,6 +2,7 @@ const { Op } = require("sequelize");
 const models = require("../models/index");
 const loansEndpoints = {};
 const jsonwebtoken = require("jsonwebtoken");
+const { sequelize } = require("../models/index");
 
 // Creamos nuevo pedido. Hay que pasarle por el body: (article)
 
@@ -54,6 +55,45 @@ loansEndpoints.myLoans = async(req,res) => {
           userIdUser: id,
         },
       });
+      res.send(resp);
+    }catch(error){
+      res.send(error)
+    }
+}
+
+
+loansEndpoints.myLoansSeries = async(req,res) => {
+  const { authorization } = req.headers;
+    const [strategy, jwt] = authorization.split(" ");
+    const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET);
+    try {
+      let  id  = payload.id_user;
+      let resp = await sequelize.query(
+        `SELECT loans.date_of_loan, series.title, series.summary, series.poster
+        FROM articles
+        Join loans ON loans.ArticleIdArticles = articles.id_articles
+        Join series on series.articleIdArticles = articles.id_articles
+        WHERE loans.userIdUser = ${id}`
+      )
+      res.send(resp);
+    }catch(error){
+      res.send(error)
+    }
+}
+
+loansEndpoints.myLoansMovies = async(req,res) => {
+  const { authorization } = req.headers;
+    const [strategy, jwt] = authorization.split(" ");
+    const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET);
+    try {
+      let  id  = payload.id_user;
+      let resp = await sequelize.query(
+        `SELECT loans.date_of_loan, movies.title, movies.summary, movies.poster
+        FROM articles
+        Join loans ON loans.ArticleIdArticles = articles.id_articles
+        Join movies on movies.articleIdArticles = articles.id_articles
+        WHERE loans.userIdUser = ${id}`
+      )
       res.send(resp);
     }catch(error){
       res.send(error)

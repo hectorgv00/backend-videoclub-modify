@@ -23,6 +23,8 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       allowNull: false,
     },
+    is_movie: DataTypes.BOOLEAN
+
 
   }, 
   {
