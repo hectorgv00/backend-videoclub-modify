@@ -93,7 +93,7 @@ SeriesControllers.getSeriesCinema = async (req,res) =>{
             FROM actors 
             JOIN actorSeries ON actorSeries.actorIdActor = actors.id_actor
             JOIN series ON actorSeries.seriesIdSeries = series.id_series
-            Where actors.name = "${actor}"  `
+            Where actors.name = "${actor}"  `, {type: sequelize.QueryTypes.SELECT}
             
             // actors.name = "%+${actor}+%"  
           )

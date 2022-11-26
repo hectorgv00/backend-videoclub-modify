@@ -78,7 +78,7 @@ MoviesControllers.getMoviesActor = async (req,res) =>{
           FROM actors 
           JOIN actorMovies ON actorMovies.actorIdActor = actors.id_actor
           JOIN movies ON actorMovies.movieIdMovie = movies.id_movies
-          Where actors.name = "${actor}" `
+          Where actors.name = "${actor}" `, {type: sequelize.QueryTypes.SELECT}
           
           // actors.name = "%+${actor}+%"  
         )
