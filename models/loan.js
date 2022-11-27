@@ -27,6 +27,8 @@ module.exports = (sequelize, DataTypes) => {
 
     price:DataTypes.FLOAT,
 
+    returned:DataTypes.BOOLEAN,
+
     userIdUser: {
       type: DataTypes.INTEGER,
       

@@ -7,6 +7,7 @@ module.exports = {
       await queryInterface.bulkInsert('loans', [
         
           { id_loan: 1,
+            returned:false,
             date_of_loan: "2022-01-22 03:35:14",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -17,6 +18,7 @@ module.exports = {
           },
           {
             id_loan: 2,
+            returned:false,
             date_of_loan: "2022-08-07 05:31:43",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -27,6 +29,7 @@ module.exports = {
           },
           {
             id_loan: 3,
+            returned:false,
             date_of_loan: "2022-08-07 21:14:16",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -37,6 +40,7 @@ module.exports = {
           },
           {
             id_loan: 4,
+            returned:false,
             date_of_loan: "2022-02-18 14:47:24",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -47,6 +51,7 @@ module.exports = {
           },
           {
             id_loan: 5,
+            returned:false,
             date_of_loan: "2022-02-22 17:23:31",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -57,6 +62,7 @@ module.exports = {
           },
           {
             id_loan: 6,
+            returned:false,
             date_of_loan: "2021-11-05 21:58:41",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -67,6 +73,7 @@ module.exports = {
           },
           {
             id_loan: 7,
+            returned:false,
             date_of_loan: "2021-12-01 05:37:03",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -77,6 +84,7 @@ module.exports = {
           },
           {
             id_loan: 8,
+            returned:false,
             date_of_loan: "2022-03-23 07:48:57",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -87,6 +95,7 @@ module.exports = {
           },
           {
             id_loan: 9,
+            returned:false,
             date_of_loan: "2022-10-03 10:13:21",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -97,6 +106,7 @@ module.exports = {
           },
           {
             id_loan: 10,
+            returned:false,
             date_of_loan: "2021-11-18 23:07:15",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -107,6 +117,7 @@ module.exports = {
           },
           {
             id_loan: 11,
+            returned:false,
             date_of_loan: "2022-05-02 02:27:36",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -117,6 +128,7 @@ module.exports = {
           },
           {
             id_loan: 12,
+            returned:false,
             date_of_loan: "2021-11-11 00:07:24",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -127,6 +139,7 @@ module.exports = {
           },
           {
             id_loan: 13,
+            returned:false,
             date_of_loan: "2022-10-22 01:23:15",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -137,6 +150,7 @@ module.exports = {
           },
           {
             id_loan: 14,
+            returned:false,
             date_of_loan: "2022-03-30 18:32:50",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -147,6 +161,7 @@ module.exports = {
           },
           {
             id_loan: 15,
+            returned:false,
             date_of_loan: "2021-12-15 09:26:17",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -157,6 +172,7 @@ module.exports = {
           },
           {
             id_loan: 16,
+            returned:false,
             date_of_loan: "2022-01-29 11:28:43",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -167,6 +183,7 @@ module.exports = {
           },
           {
             id_loan: 17,
+            returned:false,
             date_of_loan: "2022-08-26 22:40:06",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -177,6 +194,7 @@ module.exports = {
           },
           {
             id_loan: 18,
+            returned:false,
             date_of_loan: "2022-01-10 19:41:07",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -187,6 +205,7 @@ module.exports = {
           },
           {
             id_loan: 19,
+            returned:false,
             date_of_loan: "2021-12-19 11:18:20",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,
@@ -197,6 +216,7 @@ module.exports = {
           },
           {
             id_loan: 20,
+            returned:false,
             date_of_loan: "2022-08-24 16:40:13",
             date_of_return: "2022-12-12 06:32:43",
             price: 66,

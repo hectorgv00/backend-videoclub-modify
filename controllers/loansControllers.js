@@ -13,11 +13,15 @@ loansEndpoints.newLoan = async(req,res) => {
     const data = req.body;
     const todaysDate = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
     console.log(`${todaysDate}`.bgMagenta);
+    const returnDay = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate() + 2} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+ 
     try {
       await models.loan.create({
         date_of_loan: todaysDate,
         userIdUser: payload.id_user,
         articleIdArticles: data.article,
+        date_of_return: returnDay,
+        returned:0,
     }),
     res.send(`Tu pedido ha sido generado`);
 } catch (error) {
