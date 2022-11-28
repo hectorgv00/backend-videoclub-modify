@@ -68,7 +68,7 @@ usersControllers.login = async (req, res) => {
     }
     const hashedPassword = encryptPassword(password);
     if (hashedPassword !== userFound.password) {
-      res.status(401).json({ message: "Password or email is incorrect" });
+      res.send("The password is incorrect")
       return;
     }
     const secret = process.env.JWT_SECRET || '';
