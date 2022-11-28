@@ -59,6 +59,10 @@ loansEndpoints.myLoans = async(req,res) => {
           userIdUser: id,
         },
       });
+
+      if(resp === []){
+        console.log("first")
+      }      
       res.send(resp);
     }catch(error){
       res.send(error)
