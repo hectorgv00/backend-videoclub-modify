@@ -85,6 +85,16 @@ SeriesControllers.getSeriesCinema = async (req,res) =>{
           res.send(error);        
   }}
 
+  SeriesControllers.getSeries = async (req, res) => {
+    try {
+      let {page} = req.params
+      let resp = await models.series.findAll({ offset: (page-1)*5, limit: 5 });
+      res.send(resp);
+    } catch (error) {
+      res.send(error);
+    }
+  };
+
   SeriesControllers.getSeriesActor = async (req,res) =>{
     try {
       let { actor } = req.params;
