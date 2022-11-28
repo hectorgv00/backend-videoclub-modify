@@ -81,7 +81,7 @@ loansEndpoints.myLoansSeries = async(req,res) => {
         FROM articles
         Join loans ON loans.ArticleIdArticles = articles.id_articles
         Join series on series.articleIdArticles = articles.id_articles
-        WHERE loans.userIdUser = ${id}`, {type: sequelize.QueryTypes.SELECT}
+        WHERE loans.userIdUser = ${id} AND loans.returned = 0`, {type: sequelize.QueryTypes.SELECT}
       )
       res.send(resp);
     }catch(error){
@@ -100,7 +100,7 @@ loansEndpoints.myLoansMovies = async(req,res) => {
         FROM articles
         Join loans ON loans.ArticleIdArticles = articles.id_articles
         Join movies on movies.articleIdArticles = articles.id_articles
-        WHERE loans.userIdUser = ${id}`, {type: sequelize.QueryTypes.SELECT});
+        WHERE loans.userIdUser = ${id} AND loans.returned = 0`, {type: sequelize.QueryTypes.SELECT});
       res.send(resp);
     }catch(error){
       res.send(error)
