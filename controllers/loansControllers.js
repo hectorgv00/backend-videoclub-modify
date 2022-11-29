@@ -69,6 +69,25 @@ loansEndpoints.myLoans = async(req,res) => {
     }
 }
 
+// jklrjwkleew
+
+loansEndpoints.returnLoan = async(req,res)=>{
+  const { authorization } = req.headers;
+  const [strategy, jwt] = authorization.split(" ");
+  const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET);
+  let data = req.body;
+  console.log(data);
+  try {
+    let resp = await models.loan.update({
+      returned: true,
+    },{where: {userIdUser:payload.id_user, id_loan:data.id_loan }})
+    res.send(`El contenido ha sido devueto`)
+  } catch (error) {
+    res.send(error)
+  }
+}
+
+
 
 loansEndpoints.myLoansSeries = async(req,res) => {
   const { authorization } = req.headers;
