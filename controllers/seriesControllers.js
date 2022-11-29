@@ -113,4 +113,18 @@ SeriesControllers.getSeriesCinema = async (req,res) =>{
   }}
 
 
+  SeriesControllers.getSeriesGenre = async (req, res) => {
+    try {
+      let { genre } = req.params;
+      let resp = await models.series.findAll({
+        where: {
+          genre: genre,
+        },
+      });
+      res.send(resp);
+    } catch (error) {
+      res.send(error);
+    }
+  };
+
 module.exports = SeriesControllers;

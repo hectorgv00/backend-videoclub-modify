@@ -43,7 +43,7 @@ MoviesControllers.getMovies = async (req, res) => {
     let {page} = req.params
     let resp = await models.movies.findAll(
      
-      { offset: (page-1)*7, limit: 7,
+      { offset: (page-1)*5, limit: 5,
      }
      
      );
