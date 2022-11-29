@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
       len:[1,255]
     },
     episodes: DataTypes.INTEGER,
+    genre: DataTypes.STRING,
     rank: DataTypes.FLOAT,
     seasons: DataTypes.INTEGER,
     next_7_days: DataTypes.BOOLEAN,

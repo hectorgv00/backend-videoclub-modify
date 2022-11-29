@@ -41,8 +41,12 @@ MoviesControllers.getMoviesTopRated = async (req, res) => {
 MoviesControllers.getMovies = async (req, res) => {
   try {
     let {page} = req.params
-    let resp = await models.movies.findAll({ offset: (page-1)*5, limit: 5,
-     });
+    let resp = await models.movies.findAll(
+     
+      { offset: (page-1)*7, limit: 7,
+     }
+     
+     );
     res.send(resp);
   } catch (error) {
     res.send(error);

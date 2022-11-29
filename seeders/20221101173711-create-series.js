@@ -6,6 +6,7 @@ module.exports = {
 
      await queryInterface.bulkInsert('series', [{
       articleIdArticles:4,
+      genre:"Action",
       id_series:1,
       title: "Breaking Bad",
       summary: "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family's future.",
@@ -21,6 +22,7 @@ module.exports = {
    },
    {
     articleIdArticles:5,
+    genre:"Fantasy",
     id_series:2,
     title: "House of the Dragon",
     summary: "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
@@ -37,6 +39,7 @@ module.exports = {
    },
    {
     articleIdArticles:6,
+    genre:"Fantasy",
     id_series:3,
     title: "The Lord of the Rings: The Rings of Power",
     summary: "Beginning in a time of relative peace, we follow an ensemble cast of characters as they confront the re-emergence of evil to Middle-earth. From the darkest depths of the Misty Mountains, to the majestic forests of Lindon, to the breathtaking island kingdom of Númenor, to the furthest reaches of the map, these kingdoms and characters will carve out legacies that live on long after they are gone.",
@@ -53,6 +56,7 @@ module.exports = {
    },
    {
     articleIdArticles:9,
+    genre:"Thriller",
     id_series:4,
     title: "Dahmer – Monster: The Jeffrey Dahmer Story",
     summary: "Across more than a decade, 17 teen boys and young men were murdered by convicted killer Jeffrey Dahmer. How did he evade arrest for so long?",
@@ -69,6 +73,7 @@ module.exports = {
    },
    {
     articleIdArticles:10,
+    genre:"Animation",
     id_series:5,
     title: "Miraculous: Tales of Ladybug & Cat Noir",
     summary:"Normal high school kids by day, protectors of Paris by night! Miraculous follows the heroic adventures of Marinette and Adrien as they transform into Ladybug and Cat Noir and set out to capture akumas, creatures responsible for turning the people of Paris into villains. But neither hero knows the other’s true identity – or that they’re classmates!",
@@ -85,6 +90,7 @@ module.exports = {
    },
    {
     articleIdArticles:14,
+    genre:"Fantasy",
     id_series:6,
     title: "Game of Thrones",
     summary:"Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond",
@@ -100,6 +106,7 @@ module.exports = {
    },
    {
     articleIdArticles:15,
+    genre:"Thriller",
     id_series:7,
     title: "The Peripheral",
     summary:"Stuck in a small Appalachian town, a young woman’s only escape from the daily grind is playing advanced video games. She is such a good player that a company sends her a new video game system to test…but it has a surprise in store. It unlocks all of her dreams of finding a purpose, romance, and glamour in what seems like a game…but it also puts her and her family in real danger",
@@ -115,6 +122,7 @@ module.exports = {
    },
    {
     articleIdArticles:16,
+    genre:"Drama",
     id_series:8,
     title: "She-Hulk: Attorney at Law",
     summary:"Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered hulk",
@@ -130,6 +138,7 @@ module.exports = {
    },
    {
     articleIdArticles:21,
+    genre:"Drama",
     id_series:9,
     title: "La Reina del Sur",
     summary:"After years of blood, sweat and tears, a woman of humble origin ends up becoming a drug trafficking legend, with all that that means...",
