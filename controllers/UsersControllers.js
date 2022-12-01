@@ -192,7 +192,6 @@ usersControllers.deleteCurrentUser = async (req,res)=>{
   const [strategy, jwt] = authorization.split(" ");
   const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET);
   let userBody = req.body;
-  console.log(userBody);
   let password = userBody.password;
   let email = userBody.email;
   if (email !== payload.email) {

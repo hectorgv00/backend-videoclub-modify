@@ -25,27 +25,46 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type:DataTypes.STRING,
       allowNull:false,
+      validate:{
+        len:[1,50]
+      }
+      
     },
     surname: {
       type:DataTypes.STRING,
+      validate:{
+        len:[1,50]
+      }
     },
     document: {
       type:DataTypes.STRING,
       unique: true,
+      validate:{
+        len:[1,50]
+      }
     },
     address: {
       type:DataTypes.STRING,
+      validate:{
+        len:[1,50]
+      }
     },
     email: {
       type:DataTypes.STRING,
       unique:true,
       allowNull:false,
+      validate:{
+        len:[1,50]
+      }
 
     },
     
     password:{
       type:DataTypes.STRING,
       allowNull:false,
+      validate:{
+        len:[1,50]
+      }
 
     },
     rolIdRol:{

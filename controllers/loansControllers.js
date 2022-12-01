@@ -11,9 +11,9 @@ loansEndpoints.newLoan = async(req,res) => {
     const [strategy, jwt] = authorization.split(" ");
     const payload = jsonwebtoken.verify(jwt, process.env.JWT_SECRET); 
     const data = req.body;
-    const todaysDate = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+    const todaysDate = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`
     console.log(`${todaysDate}`.bgMagenta);
-    const returnDay = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate() + 2} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+    const returnDay = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()+5}`
  
     try {
       await models.loan.create({
