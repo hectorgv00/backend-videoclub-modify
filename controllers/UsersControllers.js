@@ -171,7 +171,9 @@ usersControllers.modifyCurrentUser = async (req,res) => {
 
 usersControllers.deleteUser = async(req,res) => {
 try {
-  let userMail = req.params.mail;
+  let bodyUser = req.body
+  let userMail = bodyUser.email;
+  console.log(userMail);
   let resp = await models.user.destroy({
     where: {
       email: userMail,
