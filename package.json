@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "db:create:test": "cross-env NODE_ENV=test npx sequelize-cli db:create",
-    "dev": "nodemon app.js",
+    "dev": "nodemon index.js",
     "test": "jest"
   },
   "repository": {
