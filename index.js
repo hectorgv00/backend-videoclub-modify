@@ -8,7 +8,7 @@ const { sequelize } = require('./models');
 const logMiddleware = require('./middleware/log.middleware');
 const cors = require("cors");
 
-//Config Cors Options
+//Config Cors Options aws
 var corsOptions = {
     origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
