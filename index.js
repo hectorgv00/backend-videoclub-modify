@@ -18,7 +18,7 @@ var corsOptions = {
 
   
   
-  let PORT = process.env.YOUR_PORT || process.env.PORT || 3000;
+  let PORT = 3000;
 
   
   
