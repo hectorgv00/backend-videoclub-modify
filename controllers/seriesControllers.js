@@ -55,7 +55,7 @@ SeriesControllers.getSeriestitle = async (req,res) =>{
           res.send(error);        
   }}
 
-// Encuentra las series por capitulo emitido
+// Encuentra las series por capitulo emitido 
 
 SeriesControllers.getSeriesEmitido = async (req,res) =>{
     try {
