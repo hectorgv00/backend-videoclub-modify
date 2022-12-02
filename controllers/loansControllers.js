@@ -4,7 +4,7 @@ const loansEndpoints = {};
 const jsonwebtoken = require("jsonwebtoken");
 const { sequelize } = require("../models/index");
 
-// Creamos nuevo pedido. Hay que pasarle por el body: (article)
+// Creamos nuevo pedido. Hay que pasarle por el body: (article) bhwjdhwa
 
 loansEndpoints.newLoan = async(req,res) => {
     const { authorization } = req.headers;
