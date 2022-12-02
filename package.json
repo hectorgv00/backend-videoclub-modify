@@ -2,10 +2,10 @@
   "name": "fsd-btc-reto4-movie-api",
   "version": "0.0.1",
   "description": "reto 04 FSD BTC GeeksHubs. DB & API ",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "db:create:test": "cross-env NODE_ENV=test npx sequelize-cli db:create",
-    "dev": "nodemon index.js",
+    "dev": "nodemon app.js",
     "test": "jest"
   },
   "repository": {
