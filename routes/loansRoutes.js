@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const loansEndpoints = require('../controllers/loansControllers');
+const loansEndpoints = require('../controllers/loansControllers1');
 const { authBearerMiddleware, isAdmin } = require("../middleware/auth.middleware")
 
 
