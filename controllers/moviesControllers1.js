@@ -91,7 +91,7 @@ MoviesControllers.getMoviesActor = async (req, res) => {
   try {
     let { actor } = req.params;
     let resp = await sequelize.query(
-      `SELECT actors.name, movies.title
+      `SELECT actors.name, movies.title, movies.genre, movies.summary, movies.poster, movies.duration, movies.rank, movies.articleIdArticles
           FROM actors 
           JOIN actorMovies ON actorMovies.actorIdActor = actors.id_actor
           JOIN movies ON actorMovies.movieIdMovie = movies.id_movies
