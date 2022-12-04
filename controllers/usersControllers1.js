@@ -197,7 +197,7 @@ usersControllers.deleteCurrentUser = async (req,res)=>{
   let password = userBody.password;
   let email = userBody.email;
   if (email !== payload.email) {
-    res.status(401).json({ message: "The email is incorrect" });
+    res.send("The email is incorrect" );
     return
   }
   try {
