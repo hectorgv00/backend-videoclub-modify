@@ -8,7 +8,6 @@ const {
   assertEmailIsValid,
   encryptPassword,
 } = require("../services/authorization.services");
-const { sequelize } = require("../models/index");
 
 
 // Registro de usuario
@@ -97,14 +96,11 @@ usersControllers.login = async (req, res) => {
 
 usersControllers.findAll = async (req, res) => {
   try {
-      const users = await sequelize.query(
-        `SELECT *
-            FROM users 
-            ORDER BY id_user DESC `,
-        { type: sequelize.QueryTypes.SELECT }
-  
-        // actors.name = "%+${actor}+%"
-      );
+      const users = await models.user.findAll({
+        order:[
+          ["id_user", "DESC"]
+        ]
+      });
       return res.status(200).json(users);
     } catch (error) {
       res.send(error);
