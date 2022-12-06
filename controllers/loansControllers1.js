@@ -131,7 +131,13 @@ loansEndpoints.myLoansMovies = async(req,res) => {
 
 loansEndpoints.allLoans = async (req,res) => {
   try {
-    let resp = await models.loan.findAll();
+    let resp = await models.loan.findAll(
+      {
+        order:[
+          ["id_loan", "DESC"]
+        ]
+      }
+    );
     res.send(resp);
   } catch (error) {
     res.send(error)
