@@ -42,13 +42,23 @@ SeriesControllers.getSeriesTopRated = async (req, res) => {
 SeriesControllers.getSeriestitle = async (req,res) =>{
     try {
       let { title } = req.params;
-          let resp = await models.series.findAll({
-            where:{
-              title: {
-                [Op.like]: `%${title}%`
-              }
-              }
-              }
+          let resp = await models.series.findAll(
+            {
+              where: {
+                [Op.or]: [
+                    {
+                        title: {
+                            [Op.like]: "%" + title + "%"
+                        }
+                    },
+                    {
+                        genre: {
+                            [Op.like]: "%" + title + "%"
+                        }
+                    }
+                ]
+        }
+        }
           );
           res.send(resp);
         } catch (error) {
